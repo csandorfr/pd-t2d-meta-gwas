@@ -1,0 +1,21 @@
+# METAL script: meta_PD_T2D_vs_noT2D.txt
+
+MARKERLABEL ID
+ALLELE      A1
+EFFECT      BETA
+STDERR      SE
+PVAL        P
+
+# Studies
+PROCESS OPDC_mapped.txt
+PROCESS UKBB_2025_mapped.txt
+PROCESS Tracking_mapped.txt
+
+# Fixed-effect inverse-variance meta-analysis
+SCHEME STDERR
+
+# Output
+OUTFILE META_PD_T2D_vs_noT2D .
+
+ANALYZE
+QUIT
